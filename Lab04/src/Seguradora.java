@@ -125,8 +125,7 @@ public class Seguradora {
 
             sinistro.setSeguradora(this);
 
-            scanner.close();
-        }
+        
         
         
         // valida se as informaçoes necessarias foram preenchidas para gerar o sinistro
@@ -147,7 +146,9 @@ public class Seguradora {
         // adiciona o objeto Sinistro à lista listaSinistros da Seguradora
         listaSinistros.add(sinistro);
         
+        
         return true;
+        }
     }
     
     public boolean visualizarSinistro(String cliente) {
