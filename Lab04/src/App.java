@@ -9,10 +9,10 @@ public class App {
 
         String name = lerNome();
 
-        ClientePF cliente1 = new ClientePF("Thiago",  "Rua Teste, 123", new Date(), "Ensino Superior", "Masculino", "Media", null, "494.747.070-49", new Date());
-        ClientePJ cliente2 = new ClientePJ("Tony",  "Rua Teste, 456", null, "27.365.528/0001-10", new Date());
-        ClientePF cliente3 = new ClientePF("Matheus",  "Rua Teste, 789", new Date(), "Ensino Medio", "Masculino", "Alta", null, "651.890.480-12", new Date());
-        Cliente cliente4 = new Cliente("Andre", "Rua Teste, 234", null);
+        ClientePF cliente1 = new ClientePF("Thiago",  "Rua Teste, 123", new Date(), "Ensino Superior", "Masculino", "Media", null, "494.747.070-49", new Date(), 100);
+        ClientePJ cliente2 = new ClientePJ("Tony",  "Rua Teste, 456", null, 500, "27.365.528/0001-10", new Date(), 10);
+        ClientePF cliente3 = new ClientePF("Matheus",  "Rua Teste, 789", new Date(), "Ensino Medio", "Masculino", "Alta", null, "651.890.480-12", new Date(), 200);
+        Cliente cliente4 = new Cliente("Andre", "Rua Teste, 234", null, 0);
 
         Seguradora seguradora = new Seguradora("Seguradora 322", "(11) 91234-5678", "lab2@gmail.com", "Rua Teste Seguradora, 123");
         Veiculo veiculo1 = new Veiculo("ABC-1234", "Toyota", "Etios", 2015);
@@ -24,14 +24,14 @@ public class App {
         seguradora.cadastrarCliente(cliente2);
         seguradora.cadastrarCliente(cliente3);
 
-        isCPF = cliente1.validarCPF(cliente1.getCpf());
+        isCPF = Validacao.validarCPF(cliente1.getCpf());
         if(isCPF){
             System.out.print("O CPF é valido!\n");
         }else{
             System.out.print("O CPF é invalido!\n");
         }
 
-        isCNPJ = cliente2.validarCNPJ(cliente2.getCnpj());
+        isCNPJ = Validacao.validarCNPJ(cliente2.getCnpj());
         if(isCNPJ){
             System.out.print("O CNPJ é valido!\n");
         }else{
@@ -44,6 +44,9 @@ public class App {
         cliente4.adicionarVeiculo(veiculo2);
 
         // Esse metodo utiliza a funçao System.In para leitura de dados para gerar o Sinistro
+        System.out.println("Gerando primeiro sinistro:\n");
+        seguradora.gerarSinistro();
+        System.out.println("Gerando segundo sinistro:\n");
         seguradora.gerarSinistro();
 
         seguradora.removerCliente(name);
@@ -51,7 +54,7 @@ public class App {
         System.out.println(cliente1.toString());
         System.out.println(cliente2.toString());
         System.out.println(cliente4.toString());
-        System.out.println(seguradora.toString());
+        System.out.println(seguradora);
         System.out.println(sinistro.toString());
         System.out.println(veiculo1.toString());
 
@@ -77,4 +80,5 @@ public class App {
 
         return name;
     }
+
 }
