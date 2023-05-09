@@ -76,6 +76,7 @@ public class Seguradora {
         this.listaClientes = listaClientes;
     }
 
+        //Outros metodos
     public boolean cadastrarCliente(Cliente cliente) {
         if (!listaClientes.contains(cliente)) {
             listaClientes.add(cliente);
@@ -124,8 +125,7 @@ public class Seguradora {
 
             sinistro.setSeguradora(this);
 
-            scanner.close();
-        }
+        
         
         
         // valida se as informaçoes necessarias foram preenchidas para gerar o sinistro
@@ -146,7 +146,9 @@ public class Seguradora {
         // adiciona o objeto Sinistro à lista listaSinistros da Seguradora
         listaSinistros.add(sinistro);
         
+        
         return true;
+        }
     }
     
     public boolean visualizarSinistro(String cliente) {
@@ -166,6 +168,26 @@ public class Seguradora {
            // Exibir as informações do sinistro na tela
            System.out.println(sinistro.toString());
         }
+     }
+
+     public double calcularPrecoSeguroCliente(Cliente cliente){
+        double tam = listaSinistros.size();
+
+        return cliente.calculaScore() * ( 1 + tam);
+     }
+
+     public double calcularReceita(){
+        double receita = listaClientes.stream()
+            .mapToDouble(c -> this.calcularPrecoSeguroCliente(c))
+            .sum();
+
+        return receita;
+     }
+
+     public void transferirSeguro(Cliente clienteAntigo, Cliente clienteNovo){
+        List<Veiculo> veiculosTransf = clienteAntigo.getListaVeiculos();
+        clienteAntigo.getListaVeiculos().clear();
+        clienteNovo.getListaVeiculos().addAll(veiculosTransf);
      }
     
 }

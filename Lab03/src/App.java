@@ -26,16 +26,16 @@ public class App {
 
         isCPF = cliente1.validarCPF(cliente1.getCpf());
         if(isCPF){
-            System.out.print("O CPF é valido!");
+            System.out.print("O CPF é valido!\n");
         }else{
-            System.out.print("O CPF é invalido!");
+            System.out.print("O CPF é invalido!\n");
         }
 
         isCNPJ = cliente2.validarCNPJ(cliente2.getCnpj());
         if(isCNPJ){
-            System.out.print("O CNPJ é valido!");
+            System.out.print("O CNPJ é valido!\n");
         }else{
-            System.out.print("O CNPJ é invalido!");
+            System.out.print("O CNPJ é invalido!\n");
         }
 
         cliente1.adicionarVeiculo(veiculo1);
@@ -59,9 +59,9 @@ public class App {
         seguradora.listarClientes("PJ");
         hasSinistro = seguradora.visualizarSinistro(cliente1.getNome());
         if(hasSinistro){
-            System.out.println("O cliente " + cliente1.getNome() + "tem o Sinistro!");
+            System.out.println("O cliente " + cliente1.getNome() + " tem o Sinistro!");
         }else {
-            System.out.println("O cliente " + cliente1.getNome() + "não tem o Sinistro!");
+            System.out.println("O cliente " + cliente1.getNome() + " não tem o Sinistro!");
         }
         
         seguradora.listarSinistros();
@@ -74,7 +74,6 @@ public class App {
         System.out.print("Digite o nome do Cliente: ");
         String name = scanner.nextLine();
         System.out.println("O nome do cliente digitado foi: " + name);
-        scanner.close();
 
         return name;
     }
