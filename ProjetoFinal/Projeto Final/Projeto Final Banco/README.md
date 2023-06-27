@@ -1,18 +1,38 @@
-## Getting Started
+## Sobre
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+O Sistema de Banco projetado é um sistema feito em Java, onde o usuário poderá ser cliente PF (Físico) ou PJ (jurídico), onde pode fazer transferências, depositos, investimentos, exibir informações da conta, desativar a conta, comprar com cartão de crédito ou débito, exibir a fatura, pagar a fatura, exibir extrato, adicionar contas bancárias, exibi-las, entre outras. Alguns testes foram feitos para todas as funcionalidades, utilizados na main atraves das instancias das classes.
 
-## Folder Structure
+## Funcionalidades do projeto
 
-The workspace contains two folders by default, where:
+-  adicionar contas
+-  exibir contas criadas
+-  comprar com cartão
+-  exibir fatura
+-  pagar fatura
+-  exibir extrato
+-  exibir débito
+-  depositar
+-  exibir conta
+-  desativar conta
+-  transferir
+-  investir
+-  depositar
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+# Conteúdo
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- Orientação a Objetos;
+- Classes;
+- Classes Abstratas;
+- Herança;
+- Polimorfismo;
+- Gravação em arquivo;
+- Leitura de arquivo;
+- Entre outros.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Tecnologias
+- Java
+- Projeto feito utilizando o IDE Eclipse
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+# Autores
+Thiago Yuji Okamoto  187641
+Vitor Henrique Miranda Ribeiro 206988
