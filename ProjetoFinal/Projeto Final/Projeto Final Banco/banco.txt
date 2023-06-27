@@ -1,0 +1,7 @@
+Fatura do cartao de credito
+Produto: Livro
+Valor: R$ 50.0
+Produto: cadeira
+Valor: R$ 300.0
+Valor total: R$ 350.0
+------------------------------------------------
