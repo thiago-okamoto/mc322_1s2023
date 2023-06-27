@@ -34,5 +34,5 @@ O Sistema de Banco projetado é um sistema feito em Java, onde o usuário poder�
 - Projeto feito utilizando o IDE Eclipse
 
 # Autores
-Thiago Yuji Okamoto  187641
-Vitor Henrique Miranda Ribeiro 206988
+- Thiago Yuji Okamoto  187641
+- Vitor Henrique Miranda Ribeiro 206988
