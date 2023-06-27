@@ -15,12 +15,11 @@ public class Sinistro {
     private Cliente cliente;
 
     // Construtor
-    public Sinistro(String data, String endereco, Seguradora seguradora, Veiculo veiculo, Cliente cliente) throws Exception {
+    public Sinistro(String data, String endereco, Seguradora seguradora, Veiculo veiculo, Cliente cliente) {
         this.sinistroId = counter++;
         this.data = data;
         this.endereco = endereco;
         this.seguradora = seguradora;
-        if(veiculo == null) throw new Exception();
         this.veiculo = veiculo;
         this.cliente = cliente;
     }
